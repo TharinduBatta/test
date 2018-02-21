@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<br><br><br>
+<div padding>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="kittens">
+      Kittens
+    </ion-segment-button>
+    <ion-segment-button value="puppies">
+      Puppies
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/p1.jpg">
+      </ion-thumbnail>
+      <h2>Balla1</h2>
+    </ion-item>
+    ...
+	<ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/p2.jpg">
+      </ion-thumbnail>
+      <h2>Balla 2</h2>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'kittens'">
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/k1.jpg">
+      </ion-thumbnail>
+      <h2>puusa1</h2>
+    </ion-item>
+    ...
+	
+	<ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/k2.jpg">
+      </ion-thumbnail>
+      <h2>puusa 2</h2>
+    </ion-item>
+  </ion-list>
+</div>
+
+
